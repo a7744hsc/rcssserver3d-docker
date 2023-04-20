@@ -8,5 +8,6 @@ RUN curl -fsSL https://mirror.aardsoft.fi/opensuse/repositories/science%3A/SimSp
 
 RUN apt-get update && apt-get install -y --no-install-recommends rcssserver3d && apt-get clean && rm -rf /var/lib/apt/lists/*
 
+EXPOSE 3100 3200
 ENTRYPOINT ["rcssserver3d"]
 
